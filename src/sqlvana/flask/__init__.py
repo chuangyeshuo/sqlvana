@@ -134,8 +134,8 @@ class VannaFlaskApp:
     def __init__(self, vn, cache: Cache = MemoryCache(),
                     auth: AuthInterface = NoAuth(),
                     allow_llm_to_see_data=False,
-                    logo="https://img.vanna.ai/vanna-flask.svg",
-                    title="Welcome to Vanna.AI",
+                    logo="https://sinacloud.net/shopfile2.sc.weibo.com/shopsd/20240430/27ac0fca-f614-48dc-be94-973ec035d929.png",
+                    title="Welcome to sqlvana",
                     subtitle="Your AI-powered copilot for SQL queries.",
                     show_training_data=True,
                     suggested_questions=True,
@@ -599,7 +599,7 @@ class VannaFlaskApp:
         # Proxy the /vanna.svg file to the remote server
         @self.flask_app.route("/vanna.svg")
         def proxy_vanna_svg():
-            remote_url = "https://vanna.ai/img/vanna.svg"
+            remote_url = "https://sinacloud.net/shopfile2.sc.weibo.com/shopsd/20240430/27ac0fca-f614-48dc-be94-973ec035d929.png"
             response = requests.get(remote_url, stream=True)
 
             # Check if the request to the remote URL was successful
