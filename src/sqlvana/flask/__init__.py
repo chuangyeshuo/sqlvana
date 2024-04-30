@@ -517,7 +517,7 @@ class VannaFlaskApp:
                         "type": "question_list",
                         "id": id,
                         "questions": [],
-                        "header": "Followup Questions can be enabled if you set allow_llm_to_see_data=True",
+                        "header": "如果将allow_llm_to_see_data设置为True，则可以启用后续问题",
                     }
                 )
 
@@ -542,7 +542,7 @@ class VannaFlaskApp:
                     {
                         "type": "text",
                         "id": id,
-                        "text": "Summarization can be enabled if you set allow_llm_to_see_data=True",
+                        "text": "如果将allow_llm_to_see_data设置为True，则可以启用摘要",
                     }
                 )
 
