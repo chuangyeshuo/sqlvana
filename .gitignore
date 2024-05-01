@@ -1,4 +1,5 @@
 build
+pipinstall
 **.egg-info
 venv
 .DS_Store
