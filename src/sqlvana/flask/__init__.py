@@ -134,7 +134,7 @@ class VannaFlaskApp:
     def __init__(self, vn, cache: Cache = MemoryCache(),
                     auth: AuthInterface = NoAuth(),
                     allow_llm_to_see_data=False,
-                    logo="https://sinacloud.net/shopfile2.sc.weibo.com/shopsd/20240430/27ac0fca-f614-48dc-be94-973ec035d929.png",
+                    logo="http://sinacloud.net/shopfile2.sc.weibo.com/shopsd/20240430/27ac0fca-f614-48dc-be94-973ec035d929.png",
                     title="Welcome to sqlvana",
                     subtitle="Your AI-powered copilot for SQL queries.",
                     show_training_data=True,
@@ -283,7 +283,7 @@ class VannaFlaskApp:
                     {
                         "type": "question_list",
                         "questions": questions,
-                        "header": "Here are some questions you can ask",
+                        "header": "你可以问我相似的问题：",
                     }
                 )
             except Exception as e:
@@ -507,7 +507,7 @@ class VannaFlaskApp:
                         "type": "question_list",
                         "id": id,
                         "questions": followup_questions,
-                        "header": "Here are some potential followup questions:",
+                        "header": "以下是一些相关的问题：",
                     }
                 )
             else:
@@ -596,10 +596,10 @@ class VannaFlaskApp:
             # Return 404
             return "File not found", 404
 
-        # Proxy the /vanna.svg file to the remote server
-        @self.flask_app.route("/vanna.svg")
+        # Proxy the /sqlvana.svg file to the remote server
+        @self.flask_app.route("/sqlvana.svg")
         def proxy_vanna_svg():
-            remote_url = "https://sinacloud.net/shopfile2.sc.weibo.com/shopsd/20240430/27ac0fca-f614-48dc-be94-973ec035d929.png"
+            remote_url = "http://sinacloud.net/shopfile2.sc.weibo.com/shopsd/20240430/27ac0fca-f614-48dc-be94-973ec035d929.png"
             response = requests.get(remote_url, stream=True)
 
             # Check if the request to the remote URL was successful
